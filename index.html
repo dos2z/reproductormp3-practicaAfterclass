@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Pixelify+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/script.js" defer></script>
+    <title>Reproductor mp3</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Reproductor MP3</h1>
+        <p>Afterclass curso JS sobre eventos</p>
+    </header>
+    <main>
+        <div class="reproductor">
+            <div class="pistaActual">
+                <div class="tituloCancion">
+                    <h2 id="titulo">Título de la canción</h2>
+                </div>
+                <audio src="./media/eloy01GarageBand.mp3" id="player"></audio>
+                <!-- <div class="cancionDuracion">
+                    <input type="range" name="" id="timeSong" min="0" max="100" step="1">
+                    <p class="contador">numero</p>
+                </div> -->
+            </div>
+            <div class="navReproductor">
+                <div class="canciones">
+                    <ul>
+                        <li class="song" id="eloy01GarageBand">Cancion 1</li>
+                        <li class="song" id="eloy02GarageBand">Cancion 2</li>
+                        <li class="song" id="eloy03GarageBand">Cancion 3</li>
+                    </ul>
+                </div>
+                <div class="controles">
+                    <div class="botones">
+                        <button id="btnPlay"><img src="./icons/play-solid.svg" alt="boton de play" srcset=""></button>
+                        <button id="btnPause"><img src="./icons/pause-solid.svg" alt="" srcset=""></button>
+                        <button id="btnStop"><img src="./icons/stop-solid.svg" alt="" srcset=""></button>
+                    </div>
+                    <div class="deslizador">
+                        <input type="range" id="volume" min="0" max="1" value=".6" step=".1">
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

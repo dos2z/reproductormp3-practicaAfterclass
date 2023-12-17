@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+h1{
+    color: rgb(255, 0, 0);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+header p {
+    color: antiquewhite;
+}
+
+.reproductor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*div pistaActual + sus hijos */
+.pistaActual {
+    position: relative;
+    min-width: 85%;
+    border: outset #000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.tituloCancion {
+    margin: 0 auto;
+    width: 500px;
+}
+h2{
+    padding: 20px;
+    text-align: center;
+    color: aquamarine;
+    background-color: #1c231e;
+    margin-bottom: 20px;
+    border: inset 1px #2c2c2c;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.cancionDuracion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cancionDuracion input {
+    width: 90%;
+    margin-right: 5px;
+}
+.cancionDuracion p {
+    width: 5%;
+}
+
+/*Navegador del reproductor y controles*/
+.navReproductor{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.canciones{
+    min-width: 50%;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.canciones ul{
+    background-color: #191d1a;
+}
+
+.canciones ul li{
+    list-style: none;
+    width: 200px;
+    border: outset 2px #000;
+    margin: 4px;
+    padding: 2px;
+    color: #7e1616;
+    font-family: 'Pixelify Sans', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.canciones ul li:hover {
+    background-color: #161917;
+}
+.canciones ul li:active{
+    border: inset 2px #000;
+}
+
+.controles{
+    min-width: 50%;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botones {
+    padding: 20px;
+    border: double 3px;
+    display: flex;
+    gap: 10px;
+}
+.botones > button {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.botones > button:last-of-type{
+    background-color: #f74242;
+}
+.deslizador{
+    height: 30px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    border: double 3px;
+    
+}
+#volume {
+    width: 60%;    
+}
+
+
+
+
+

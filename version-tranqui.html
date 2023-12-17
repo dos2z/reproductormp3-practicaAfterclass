@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <audio src="./media/eloy01GarageBand.mp3" id="player"></audio>
+
+    <button id="btnPlay">Play</button>
+    <button id="btnPause">Pause</button>
+    <button id="btnStop">Stop</button>
+
+    <input type="range" name="" id="volume" min="0" max="1" value=".6" step=".1">
+    
+    <ul>
+        <li onclick="playSong(this)">eloy01GarageBand</li>
+        <li onclick="playSong(this)">eloy02GarageBand</li>
+        <li onclick="playSong(this)">eloy03GarageBand</li>
+    </ul>
+    
+    <script>
+        const player = document.querySelector('#player');
+
+            function playSong(li) {
+                console.log(li);
+                console.log(li.textContent);
+                //let ruta = "./media/" + li.textContent + ".mp3"; abajo lo mismo pero con backtick ``
+                let ruta = `/media/${li.textContent}.mp3`;
+                console.log(ruta);
+                player.setAttribute('src', ruta);
+                player.play();
+            }
+
+        console.dir(player); //al estar dentro del html se puede usar console.dir para verlo tipo objeto
+
+        /* const play = document.querySelector('#btnPlay');
+        play.addEventListener('click', ()=>{
+            player.play();
+        }); */
+
+    </script>
+</body>
+</html>
