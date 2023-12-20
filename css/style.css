@@ -1,58 +1,56 @@
+/*Reset*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
-
+/*Body*/
 body {
     background-color: #1a1a1a;
 }
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px;
 }
-
-h1{
+h1 {
     color: rgb(255, 0, 0);
     font-family: 'Orbitron', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
 }
-
 header p {
     color: antiquewhite;
 }
-
 .reproductor {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
-/*div pistaActual + sus hijos */
+/*div pistaActual + hijos */
 .pistaActual {
     position: relative;
-    min-width: 85%;
+    max-width: 1000px;
+    width: 85%;
     border: outset #000;
     margin-bottom: 20px;
     padding: 20px;
 }
 .tituloCancion {
     margin: 0 auto;
-    width: 500px;
+    max-width: 500px;
+    width: 70%;
+    min-height: 100px;
+    background: linear-gradient(to right, #000 20%, #565656 35%, #000 50%);
+    border: inset 3px #2c2c2c;
 }
-h2{
+h2 {
     padding: 20px;
     text-align: center;
     color: aquamarine;
-    background-color: #1c231e;
     margin-bottom: 20px;
-    border: inset 1px #2c2c2c;
     font-family: 'Orbitron', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -69,26 +67,29 @@ h2{
 .cancionDuracion p {
     width: 5%;
 }
-
 /*Navegador del reproductor y controles*/
-.navReproductor{
+.navReproductor {
     width: 85%;
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 5px;
 }
-.canciones{
-    min-width: 50%;
-    border: 1px solid #000;
+.canciones {
+    width: 100%;
+    border: outset #000;
     margin-bottom: 20px;
     padding: 20px;
-}
 
-.canciones ul{
-    background-color: #191d1a;
 }
+.canciones ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-.canciones ul li{
+}
+.canciones ul li {
     list-style: none;
     width: 200px;
     border: outset 2px #000;
@@ -99,53 +100,71 @@ h2{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
 .canciones ul li:hover {
     background-color: #161917;
 }
-.canciones ul li:active{
+
+.canciones ul li:active {
     border: inset 2px #000;
 }
-
-.controles{
-    min-width: 50%;
-    border: 1px solid #000;
+.controles {
+    width: 100%;
+    border: outset #000;
     margin-bottom: 20px;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
 }
 .botones {
+    margin: 10px;
     padding: 20px;
     border: double 3px;
     display: flex;
     gap: 10px;
+    background-color: #000;
 }
-.botones > button {
+.botones>button {
     width: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
-.botones > button:last-of-type{
+.botones>button:last-of-type {
     background-color: #f74242;
 }
-.deslizador{
+.deslizador {
     height: 30px;
     width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(-90deg);
+    margin: 10px;
     border: double 3px;
-    
+    background-color: #000;
+
 }
 #volume {
-    width: 60%;    
+    width: 60%;
 }
-
-
-
-
-
+@media screen and (min-width: 800px) {
+    .navReproductor {
+        max-width: 1000px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .canciones {
+        min-width: 50%;
+        height: 90%;
+    }
+    .controles {
+        min-width: 50%;
+        height: 90%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .deslizador {
+        transform: rotate(-90deg);
+    }
+}
